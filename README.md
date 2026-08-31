@@ -1,4 +1,4 @@
-# FactDeMice — Comment Fact Checker (Chrome extension)
+# FactDeMice — COmment FAct CHecker EXtension (Chrome extension)
 
 Select a comment on a discussion site (e.g. lide.cz, social media), and the
 extension sends it to the [FactDeMice API](https://pcknot9.fit.vutbr.cz:9999/docs)
