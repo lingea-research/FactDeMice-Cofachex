@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      font: 13px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: #1f2328;
+      margin: 0;
+      padding: 14px 16px;
+    }
+    h1 { font-size: 14px; margin: 0 0 12px; }
+    label { display: block; font-weight: 600; margin-bottom: 4px; }
+    input, select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 6px 8px;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      font: inherit;
+    }
+    button {
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 7px 14px;
+      font: 600 13px system-ui, sans-serif;
+      cursor: pointer;
+    }
+    button:hover { background: #1765cc; }
+    #status { margin-left: 10px; color: #116329; }
+    .hint { color: #656d76; font-size: 12px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>FactDeMice settings</h1>
+
+  <label for="apiKey">API key</label>
+  <input type="password" id="apiKey" placeholder="X-API-Key value" autocomplete="off">
+
+  <label for="targetClaims">Target number of claims (1–20, optional)</label>
+  <input type="number" id="targetClaims" min="1" max="20" placeholder="API default">
+
+  <label for="model">Model</label>
+  <select id="model">
+    <option value="">API default</option>
+  </select>
+  <div id="modelHint" class="hint" style="margin: -6px 0 12px;"></div>
+
+  <button id="save">Save</button><span id="status"></span>
+
+  <p class="hint">Select a comment on any page and click the 🔍 Fact-check bubble, or use the right-click menu.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "FactDeMice - Comment Fact Checker",
+  "description": "Select a comment on a discussion or social site and get a list of verifiable claims from the FactDeMice API.",
+  "version": "0.1.0",
+  "permissions": ["storage", "contextMenus"],
+  "host_permissions": ["https://pcknot9.fit.vutbr.cz:9999/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "FactDeMice settings"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
